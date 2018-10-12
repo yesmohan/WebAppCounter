@@ -4,8 +4,8 @@
 	<groupId>com.javarticles.webapp</groupId>
 	<artifactId>webappExample</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>webappExample Maven Webapp</name>
+	<version>1.0</version>
+	<name>webapp_login</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<dependency>
