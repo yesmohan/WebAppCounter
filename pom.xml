@@ -5,7 +5,7 @@
 	<artifactId>webappExample</artifactId>
 	<packaging>war</packaging>
 	<version>1.1</version>
-	<name>webapp_login</name>
+	<name>webapp_farm</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<dependency>
@@ -21,6 +21,6 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>webappExample</finalName>
+		<finalName>my-farm</finalName>
 	</build>
 </project>
