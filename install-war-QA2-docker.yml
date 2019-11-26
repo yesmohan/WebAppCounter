@@ -1,0 +1,5 @@
+- hosts: QA2 or 10.255.136.42
+  tasks:
+   - name: run the docker image
+     shell: docker run -d -P my-farm:v1
+    
