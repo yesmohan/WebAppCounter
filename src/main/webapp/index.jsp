@@ -1,6 +1,6 @@
 <HTML>
 <HEAD>
-<TITLE>VAL-VIL ORI FARMS</TITLE>
+<TITLE>KAARALA</TITLE>
 	<style>
 		p {
  			 color: white;
@@ -36,9 +36,9 @@
                 <BR>
                 <BR>
                 <BR>
-                        <FONT COLOR="WHITE" SIZE="7">WELCOME TO VAL-VIL ORI FARMS
+                        <FONT COLOR="WHITE" SIZE="7">WELCOME KAARALA FARMS
                         <br>
-			<FONT COLOR="WHITE" SIZE="5">|- from the blended nature of Kolli Hills -|
+			<FONT COLOR="WHITE" SIZE="5">|- from the blended nature of Kalvarayan and Kolli Hills -|
 			<br><br>
 			<FONT COLOR="WHITE" SIZE="6">search your item below
 		        <br><br>
@@ -54,7 +54,7 @@
 	</FORM>
         <div style="position: relative">
                 <p style="position: fixed; bottom: 0; width:100%; text-align: center" >
-                   <strong> Contact us at [ val-vil-ori-farms@gmail.com ] for ordering { or } <a href="https://forms.gle/WKceHMECdQmDGqcM6" style="color: rgb(0,255,0)" target="_blank"><font color="WHITE">CLICK HERE TO PLACE YOUR ORDER</font></a></a> <br><br>
+                   <strong> Contact us at [ kaarala-farms@gmail.com ] for ordering { or } <a href="https://forms.gle/WKceHMECdQmDGqcM6" style="color: rgb(0,255,0)" target="_blank"><font color="WHITE">CLICK HERE TO PLACE YOUR ORDER</font></a></a> <br><br>
                             The number of Visitors :: <%= visitor %> <br>
                             <% out.print(new java.util.Date()); %>
                    </strong> </p>
