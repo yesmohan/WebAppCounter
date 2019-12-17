@@ -1,6 +1,6 @@
 pipeline{
      
-     agents { 'label' 'java' }
+     agent { 'label' 'java' }
      stages{
            stage(" Build the farm web app code"){
                     steps{
