@@ -4,7 +4,7 @@ sleep 10
 echo "Checking if farm server is up"
  
 
-farm_url=http://192.168.0.15:8080/my-farm/index.jsp
+farm_url=http://192.168.0.108:8080/my-farm/index.jsp
 
 # save the status in some variable 
 
