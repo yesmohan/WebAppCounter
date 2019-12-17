@@ -28,7 +28,7 @@ pipeline{
           stage(" monitor"){
                   steps{
                   sh "sleep 5"
-                  sh "./monitoring.sh"
+                  sh "./monitorting.sh"
                   }
           }
     }
