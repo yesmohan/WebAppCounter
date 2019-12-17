@@ -1,46 +1,52 @@
 pipeline{
-    
-    agents { 'label' 'linux-build'}
-    stages{
+     agents{ 'label' 'java'}
 
-        stage("build-the-source-code"){
-             steps{
-                 sh "/usr/share/maven/bin/mvn clean install"
-            }
+     stages{
+
+       stage(" Build the farm web app code"){
+          
+          steps{
+          echo" generating the war file"
+          sh "/usr/bin/mvn install"
+  
+          }
+            
+        }
+
+       stage(" static code analyser"){
+
+        steps{
+          echo" scaning the source file"
+          sh "/usr/bin/mvn verify sonar:sonar"
+  
+          }
+   
+        }
+       stage(" deploy on tomcat8"){
+         
+         
+        steps{
+          echo" deploy on tomcat path /var/lib/tomcat8/webapps"
+          sh "service tomcat8 stop"
+          sh "rm -f /var/lib/tomcat8/webapps/my-farm.war"
+          sh "cp target/my-farm.war /var/lib/tomcat8/webapps/"
+          sh "service tomcat8 start"  
+          }
         
         }
-        stage("static code analyser"){
-             steps{
-                 sh "/usr/share/maven/bin/mvn verify sonar:sonar"
-            }
 
-        }
-       stage("deploy to QA-1"){
-             steps{
-                 sh "anisble-playbook install-war-QA1.yml"
-            }
+       stage(" monitor"){ 
 
-        }
-       stage("build docker image for QA2"){
-             steps{
-                 sh "docker build -t my-farm:v1 ."
-            }
-
-        }
-       stage("docker run on QA2"){
-             steps{
-                 //sh "docker run -d -P my-farm:v1"
-                   sh "ansible-playbook  install-war-QA2-docker.yml"
-            }
-
-        }
-       stage("run selenium test on QA"){
-             steps{
-                 echo "java -jar selenium-server.jar"
-            }
+        steps{
+         sh "sleep 5"
+         sh "./monitoring.sh"
 
         }
 
-   }
+     
+       }
+
+
+      }
 
 }
