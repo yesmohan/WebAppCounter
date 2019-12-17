@@ -24,7 +24,7 @@
 		alert("Please enter the search for an ITEM !");
 		return false;
 		}
-		alert("Thank you :-) , We have the availabilty of your search item and please check bottom of the page to order !"
+		alert("Thank you :-) , We have the availabilty of your search item and please check in bottom of the page to order !"
                  );
 		return true;
 		}
