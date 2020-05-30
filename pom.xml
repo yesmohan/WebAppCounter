@@ -4,8 +4,8 @@
 	<groupId>com.mk.webapp_myfarm</groupId>
 	<artifactId>my_farm</artifactId>
 	<packaging>war</packaging>
-	<version>1.1</version>
-	<name>webapp_myfarm</name>
+  <version>1.1</version>
+	<name>webapp_myfarm</name
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<dependency>
