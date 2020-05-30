@@ -1,0 +1,26 @@
+---
+- hosts: localhost
+  tasks:
+   - name: TO INSTALL TOMCAT8
+     shell: apt-get install tomcat8 -y
+     become: true
+
+   - name: TO STOP TOMCAT8
+     service: name=tomcat8 state=stopped
+     become: true
+
+  # - name: to download file from internet
+   #  get_url: url=https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war dest=/tmp/sample.war
+
+   - name: DELETE OLD WAR FILE FROM WEBAPPS
+     file: path=/var/lib/tomcat8/webapps/webappExample.war state=absent
+     become: true
+
+   - name: COPY WAR FILE TO TOMCAT WEBAPPS
+     copy: src=webappExample.war dest=/var/lib/tomcat8/webapps/webappExample.war mode=0777
+     become: true
+
+   - name: TO START TOMCAT8
+     service: name=tomcat8 state=started
+     become: true
+...
